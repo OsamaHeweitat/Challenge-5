@@ -7,7 +7,6 @@ public class Spirograph {
     private double desiredRotations;
 
     public Spirograph(double CircleRadius, double PointRadius, double Offset, double desiredRotations){
-        System.out.println("Spirograph created!");
         R = CircleRadius;
         r = PointRadius;
         O = Offset;
