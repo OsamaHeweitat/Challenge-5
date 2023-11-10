@@ -23,10 +23,13 @@ public class Spirograph {
 
         prevX = (int) ((R-r)*Math.cos(theta) + O*Math.cos(((R-r)/r)*theta));
         prevY = (int) ((R-r)*Math.sin(theta) - O*Math.sin(((R-r)/r)*theta));
+
+        Graphics2D g2D = (Graphics2D) g;
+        g2D.setStroke(new BasicStroke(2));
         while(theta < desiredRotations * 2 * Math.PI){
             x = (int) ((R-r)*Math.cos(theta) + O*Math.cos(((R-r)/r)*theta));
             y = (int) ((R-r)*Math.sin(theta) - O*Math.sin(((R-r)/r)*theta));
-            g.drawLine(centerX + prevX, centerY + prevY, centerX + x, centerY + y);
+            g2D.drawLine(centerX + prevX, centerY + prevY, centerX + x, centerY + y);
 
             prevX = x;
             prevY = y;
